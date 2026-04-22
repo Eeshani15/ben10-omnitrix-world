@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  overflow: hidden;
+  color: lime;
+}
+
+/* =========================
+   🔥 WELCOME SCREEN
+========================= */
+.welcome {
+  height: 100vh;
+  width: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.welcome h1 {
+  font-size: 28px;
+  text-shadow: 0 0 20px lime;
+  margin: 0;
+}
+
+.welcome button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
+  background: lime;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* =========================
+   🔥 MAIN APP CONTAINER
+========================= */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   🔥 OMNITRIX CIRCLE
+========================= */
+.watch {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 6px solid lime;
+  box-shadow: 0 0 40px lime, 0 0 120px rgba(0,255,0,0.25);
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* INNER CIRCLE */
+.innerCircle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGE (WATCH + ALIENS) */
+.frameImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* =========================
+   🔥 POP ANIMATION
+========================= */
+.pop {
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* =========================
+   🔥 ENERGY FLASH EFFECT
+========================= */
+.flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(0,255,0,0.7), rgba(0,0,0,0.9));
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.flash.active {
+  animation: flashAnim 0.4s ease;
+}
+
+@keyframes flashAnim {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* =========================
+   🔥 TEXT
+========================= */
+.name {
+  margin-top: 20px;
+  font-size: 22px;
+  text-shadow: 0 0 10px lime;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px lime;
+}
